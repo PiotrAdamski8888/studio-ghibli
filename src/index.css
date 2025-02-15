@@ -1,15 +1,140 @@
-@import-normalize; /* bring in normalize.css styles */
-
 body {
+  font-family: "Roboto", sans-serif;
+  background: url("https://image.cdn2.seaart.ai/2024-01-20/cmlsdite878c73f800j0/ba9936b9e84c4bb48ddccdc48276b539aeda43f7_high.webp")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+/* 
+https://image.cdn2.seaart.ai/2024-01-29/cmrp41de878c73b85v1g/14fb5a0fccbc035706bc446334baa7de0abb080f_high.webp */
+/* https://image.cdn2.seaart.ai/2023-07-05/41679226490949/a24acf24c2c9104ead2390a3b99093a5d929fd0a_high.webp */
+/* https://image.cdn2.seaart.ai/2023-10-15/19954183145795589/094bb571425a34d638108bd509e863f375d04edd_high.webp */
+
+/* https://image.cdn2.seaart.ai/2023-11-12/22461166958724101/7d103b52c1b3ceb7430f72447bc61759facb5463_high.webp */
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header,
+footer {
+  background-color: #4a86e8; /* Jasny niebieski, charakterystyczny dla Ghibli */
+  color: #ffffff; /* Biały tekst dla kontrastu */
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer {
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+main {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Zmiana z space-between na space-evenly */
+  gap: 20px;
+  padding-right: 20px; /* Dodanie paddingu z prawej strony */
+}
+
+.ghibli-movie {
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Szybsza reakcja */
+  cursor: pointer;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ghibli-movie:hover {
+  transform: translateY(-8px) scale(1.05); /* Większe podniesienie i powiększenie */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Bardziej wyrazisty cień */
+}
+
+.movie-poster {
+  width: 100%;
+  max-width: 300px; /* lub inna preferowana maksymalna szerokość */
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 40px; /* Zwiększamy górny margines */
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: #ddd;
+}
+
+.nav-link,
+.footer-link {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  margin: 0 10px;
+}
+
+.nav-link:hover,
+.footer-link:hover {
+  text-decoration: none;
 }
